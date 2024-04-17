@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Update Profile</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Form example</h1>
+<form action="#" th:action="@{/update_profile}" th:object="${updateProfile}"  method="post">
+    <input type="hidden" th:field="*{id}">
+    <div><input type="text" th:field="*{username}" placeholder="Username" /></div>
+    <div><input type="password" th:field="*{password}" placeholder="Password" /></div>
+    <div><input type="text" th:field="*{description}" placeholder="Description" /></div>
+    <div><input type="submit" value="Save"></div>
+</form>
+</body>
+</html>

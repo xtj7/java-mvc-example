@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Profile</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Show profile <span th:text="${user.username}"></span></h1>
+<div><img th:src="${user.avatar}" alt=""></div>
+<div>
+    <strong>Registered:</strong> <span th:text="${user.registeredAt}"></span>
+</div>
+<div><strong>Description:</strong></div>
+<div><span th:text="${user.description}"></span></div>
+<div>&nbsp;</div>
+<div><a th:href="${'/update_profile?username=' + user.username}">edit profile</a></div>
+</body>
+</html>

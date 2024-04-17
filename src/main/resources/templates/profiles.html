@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Profile</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>List of profiles</h1>
+<table>
+    <tr th:each="user : ${users}">
+        <td>
+            <a th:href="${'/profile/' + user.username}"><img th:src="${user.avatar}" style="height: 32px;" alt=""></a>
+        </td>
+        <td>
+            <a th:href="${'/profile/' + user.username}" th:text="${user.username}"></a>
+        </td>
+        <td th:text="${user.registeredAt}"></td>
+    </tr>
+</table>
+</body>
+</html>
